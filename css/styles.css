@@ -143,7 +143,7 @@ html, body {
 
 /* ============================================================
    AMBIENT BLOBS
-   ============================================================ */
+   ============================================================ 
 .blobs {
   position: fixed;
   inset: 0;
@@ -210,7 +210,7 @@ html, body {
 
 .deck.has-bg-active .blobs { opacity: 0; pointer-events: none; }
 
-/* Low-power blob simplification */
+/* Low-power blob simplification 
 body.simple-blobs .blob {
   animation: none;
   opacity: 0.06;
@@ -219,6 +219,14 @@ body.simple-blobs .blob {
 body.simple-blobs .blob-2,
 body.simple-blobs .blob-4 {
   display: none;
+}
+
+/* Disable heavy blur animations that cause pauses 
+body.auto-playing .blob,
+.simple-blobs .blob {
+  animation: none !important;
+  filter: none !important;
+  opacity: 0.15;
 }
 
 /* ============================================================
