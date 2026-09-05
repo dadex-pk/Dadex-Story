@@ -94,13 +94,13 @@ html, body {
   transition: top 0.2s;
 }
 .skip-link:focus { top: 0; }
-
+/*
 :where(button, a, [tabindex]):focus-visible {
   outline: 3px solid rgba(190, 25, 25, 0.55);
   outline-offset: 4px;
   box-shadow: 0 0 0 7px rgba(190, 25, 25, 0.10);
 }
-
+*/
 .slide[aria-hidden="true"] { pointer-events: none; }
 .slide[aria-hidden="false"] { pointer-events: auto; }
 
