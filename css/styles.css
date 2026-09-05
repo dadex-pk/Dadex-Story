@@ -94,13 +94,13 @@ html, body {
   transition: top 0.2s;
 }
 .skip-link:focus { top: 0; }
-/*
+
 :where(button, a, [tabindex]):focus-visible {
   outline: 3px solid rgba(190, 25, 25, 0.55);
   outline-offset: 4px;
   box-shadow: 0 0 0 7px rgba(190, 25, 25, 0.10);
 }
-*/
+
 .slide[aria-hidden="true"] { pointer-events: none; }
 .slide[aria-hidden="false"] { pointer-events: auto; }
 
@@ -639,6 +639,20 @@ body.simple-blobs .blob-4 {
   opacity: 1 !important;
 }
 
+/* Suppress any borders or outlines on active typewriter elements */
+.typewriter-element,
+[data-typewriter-active="true"] {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* Ensure no text-selection boxes cause visual glitches during presentation */
+.slide h1, .slide h2, .slide h3, .slide p {
+  -webkit-user-select: none;
+  user-select: none;
+}
 /* ============================================================
    LAYOUT COMPONENTS
    ============================================================ */
